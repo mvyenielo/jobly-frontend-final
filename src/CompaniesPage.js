@@ -31,7 +31,7 @@ function CompaniesPage() {
 
   return (
     <>
-      <h1>Companies Page!</h1>
+      <h1>Companies</h1>
       <SearchBar searchFunc={searchCompanies} />
       {!currCompanies.isLoading
         ? currCompanies.companies.map(company =>

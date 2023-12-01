@@ -30,7 +30,7 @@ function JobsPage() {
 
   return (
     <>
-      <h1>Jobs Page!</h1>
+      <h1>Jobs</h1>
       <SearchBar searchFunc={searchJobs} />
       {!currJobs.isLoading
         ? currJobs.jobs.map(job =>

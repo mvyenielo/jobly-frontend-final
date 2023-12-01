@@ -111,7 +111,10 @@ function JoblyApp() {
   return (
     <div>
       <BrowserRouter>
-        <userContext.Provider value={{ username: user?.username }}>
+        <userContext.Provider value={{
+            username: user?.username,
+            firstName: user?.firstName
+          }}>
           <NavBar user={user} logOutUser={logOutUser} />
           <RouteList
             loginUser={loginUser}

@@ -9,12 +9,12 @@ import { useContext } from "react";
  */
 function HomePage() {
 
-  const { username } = useContext(userContext);
+  const { username, firstName } = useContext(userContext);
 
   return (
     <div className="HomePage-container mt-5">
       <h1>Jobly</h1>
-      <image src="https://clipart-library.com/images/pc58xnaRi.png"></image>
+      <img src="/logos/career_climbing.jpg" width="600px"/>
       {!username ?
         <div className="mt-5" >
           <Link to="/login">
@@ -24,7 +24,7 @@ function HomePage() {
             <button className="btn btn-primary ml-5">Sign Up</button>
           </Link>
         </div> :
-        <h1>Welcome back {username}!</h1>}
+        <h1>Welcome back {firstName}!</h1>}
     </div>
   );
 }
