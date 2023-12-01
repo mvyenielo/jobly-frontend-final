@@ -14,7 +14,7 @@ function HomePage() {
   return (
     <div className="HomePage-container mt-5">
       <h1>Jobly</h1>
-      <image src="people_working.png"></image>
+      <image src="https://clipart-library.com/clipart/pc58xnaRi.htm"></image>
       {!username ?
         <div className="mt-5" >
           <Link to="/login">
