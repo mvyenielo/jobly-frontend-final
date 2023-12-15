@@ -1,5 +1,15 @@
 .job-panel{
   border-width: 2px;
-  border-color: black;
+  border-color: rgb(0, 128, 109);
   border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  width: 500px;
+  height: 200px;
 }
+
+
+

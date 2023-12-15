@@ -1,4 +1,4 @@
-.company-panel {
+.card {
   border-width: 2px;
   border-color: rgb(0, 128, 109);
   border-style: solid;
@@ -11,12 +11,14 @@
   height: 300px;
 }
 
+.Login-container {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
 
-.CompanyPanel-link {
-  text-decoration: none;
 }
 
-.company-panel:hover {
-  background-color: rgb(238, 238, 238);
-  box-shadow: 0.3rem 0.4rem rgba(0, 0, 0, 0.05);
+.input {
+  padding: .25rem;
 }

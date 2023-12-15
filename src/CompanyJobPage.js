@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import JobPanel from "./JobPanel";
 import Loading from "./Loading";
-
+import "./CompanyJobsPage.css";
 /**
  * CompaniesJobsPage: Shows details about a company, lists all jobs
  * associated with that company
@@ -33,11 +33,13 @@ function CompanyJobPage() {
     <>
       {!isLoading
         ?
-        <div>
+        <>
           <h1>{companyData.name}</h1>
           <p>{companyData.description}</p>
+        <div class="company-jobs-page">
           {companyData.jobs.map(job => <JobPanel key={job.id} job={job} />)}
         </div>
+        </>
         : <Loading />}
     </>);
 }

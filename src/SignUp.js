@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ErrorMessage from "./ErrorMessage";
+import "./SignUp.css"
 
 const initialSignUpData = {
   username: "", password: "",
@@ -50,41 +51,53 @@ function SignUp({ registerUser }) {
 
   return (
     <div className="SignUp-container">
-      <h1>Sign Up</h1>
-      <form className="SignUp" onSubmit={handleSubmit}>
+      <div className="card">
+      <h1 className="card-title">Sign Up</h1>
+      <form className="card-body SignUp" onSubmit={handleSubmit}>
+        <div className="input">
         username:
         <input
           name="username"
           value={signUpData.username}
           onChange={handleChange}
         />
+        </div>
+        <div className="input">
         password:
         <input
           name="password"
           value={signUpData.password}
           onChange={handleChange}
         />
+        </div>
+        <div className="input">
         first name:
         <input
           name="firstName"
           value={signUpData.firstName}
           onChange={handleChange}
         />
+        </div>
+        <div className="input">
         last name:
         <input
           name="lastName"
           value={signUpData.lastName}
           onChange={handleChange}
         />
+        </div>
+        <div className="input">
         email:
         <input
           name="email"
           value={signUpData.email}
           onChange={handleChange}
         />
+        </div>
         <button className="btn btn-primary">Submit</button>
       </form>
       {errors && <ErrorMessage errorMessages={errors} />}
+    </div>
     </div>
   );
 }

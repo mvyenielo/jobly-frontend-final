@@ -58,6 +58,8 @@ function JoblyApp() {
   /** Gets token from backend, sets token for user based on user info from
    * login form, logs in user*/
   async function loginUser(loginInfo) {
+    console.log("IN LOGIN IN APP!")
+
     const { username, password } = loginInfo;
 
     const token = await JoblyApi.login(username, password);

@@ -25,6 +25,13 @@ function HomePage() {
           </Link>
         </div> :
         <h1>Welcome back {firstName}!</h1>}
+        <div>
+        <h5>
+          demo login info:
+        </h5>
+        <p><i>username:</i> demo</p>
+        <p><i>password:</i> password</p>
+      </div>
     </div>
   );
 }

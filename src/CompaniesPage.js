@@ -4,6 +4,7 @@ import { useState } from "react";
 import JoblyApi from "./api";
 import { useEffect } from "react";
 import Loading from "./Loading";
+import "./CompaniesPage.css";
 
 /**
  * CompaniesPage: Renders list of all companies
@@ -33,10 +34,12 @@ function CompaniesPage() {
     <>
       <h1>Companies</h1>
       <SearchBar searchFunc={searchCompanies} />
+      <div class="companies-page">
       {!currCompanies.isLoading
         ? currCompanies.companies.map(company =>
           <CompanyPanel key={company.handle} company={company} />)
         : <Loading />}
+      </div>
     </>);
 }
 

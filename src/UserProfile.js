@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ErrorMessage from "./ErrorMessage";
+import "./UserProfile.css"
 
 //takes in updated user information and sends this to JoblyApp to be updated
 //
@@ -61,36 +62,46 @@ function UserProfile({ user, patchUser }) {
 
   return (
     <div className="UserProfile-container">
-      <h1>Edit Profile</h1>
-      <form className="UserProfile" onSubmit={handleSubmit}>
+    <div className="card">
+      <h1 className="card-title">Edit Profile</h1>
+      <form className="card-body UserProfile" onSubmit={handleSubmit}>
+        <div className="input">
         username:
         <input
           name="username"
           value={profileData.username}
           disabled
         />
+        </div>
+        <div className="input">
         first name:
         <input
           name="firstName"
           value={profileData.firstName}
           onChange={handleChange}
         />
+        </div>
+        <div className="input">
         last name:
         <input
           name="lastName"
           value={profileData.lastName}
           onChange={handleChange}
         />
+        </div>
+        <div className="input">
         email:
         <input
           name="email"
           value={profileData.email}
           onChange={handleChange}
         />
+        </div>
         <button className="btn btn-primary">Submit</button>
       </form>
       {success && <p>Information successfully updated!</p>}
       {errors && <ErrorMessage errorMessages={errors} />}
+    </div>
     </div>
   );
 }

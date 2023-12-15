@@ -14,7 +14,7 @@ function JobPanel({ job }) {
   return (
     <div className="job-panel">
       <h2>{job.title}</h2>
-      {job.companyName && <h3>{job.companyName}</h3>}
+      {job.companyName && <h4><i>{job.companyName}</i></h4>}
       <p>Salary: {job.salary}</p>
       <p>Equity: {job.equity}</p>
     </div>

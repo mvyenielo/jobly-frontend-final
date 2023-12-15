@@ -19,6 +19,7 @@ class JoblyApi {
   // "FtrMwBQwe6Ue-glIFgz_Nf8XxRT2YecFCiSpYL0fCXc";
 
   static async request(endpoint, data = {}, method = "GET") {
+    console.log("IN REQUEST IN API!")
     const url = new URL(`${BASE_URL}/${endpoint}`);
     const headers = {
       authorization: `Bearer ${JoblyApi.token}`,
@@ -80,6 +81,7 @@ class JoblyApi {
   /** Send POST request with user login information, returns token */
 
   static async login(username, password) {
+    console.log("IN LOGIN IN API!")
     const res = await this.request(`auth/token`, { username, password }, 'POST');
     return res.token;
   }

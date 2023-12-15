@@ -4,6 +4,8 @@ import { useState } from "react";
 import JoblyApi from "./api";
 import { useEffect } from "react";
 import Loading from "./Loading";
+import "./JobsPage.css";
+
 /**
  * Renders page of Job components
  *
@@ -32,10 +34,12 @@ function JobsPage() {
     <>
       <h1>Jobs</h1>
       <SearchBar searchFunc={searchJobs} />
+      <div class="jobs-page">
       {!currJobs.isLoading
         ? currJobs.jobs.map(job =>
           <JobPanel key={job.id} job={job} />)
         : <Loading />}
+      </div>
     </>);
 }
 
