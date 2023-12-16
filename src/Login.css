@@ -7,8 +7,8 @@
   justify-content: center;
   flex-direction: column;
   margin: 10px;
-  width: 500px;
-  height: 300px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .Login-container {
